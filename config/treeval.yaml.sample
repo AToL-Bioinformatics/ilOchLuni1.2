@@ -1,0 +1,36 @@
+assembly:
+  assem_level: scaffold
+  assem_version: 2
+  sample_id: ilOchLuni1
+  latin_name: Ochrogaster lunifer
+  defined_class: Insecta
+  project_id: AToL
+reference_file: ${PWD}/results/ascc/ilOchLuni1.2/pacbio_hifi.phased/PRIMARY_HAPLO_combined.fasta.gz
+map_order: length
+assem_reads:
+  read_type: hifi
+  read_data:
+    - ${PWD}/results/qc/reads/PACBIO_SMRT/bpa-avid-pacbio-hifi-702636-m84073_260626_035957_s1.fasta.gz
+  supplementary_data: path
+hic_data:
+  hic_cram:
+    - ${PWD}/results/qc/reads/Hi-C/bpa-avid-illumina-shortread-669080-sc2233836-sc3.cram
+  hic_aligner: bwamem2
+kmer_profile:
+  # kmer_length will act as input for kmer_read_cov fastk and as the name of folder in profile_dir
+  kmer_length: 31
+  profile: ${PWD}/results/genomeassembly/ilOchLuni1.2/ilOchLuni1.2.pacbio_hifi.phased
+self_comp:
+  motif_len: 0
+intron:
+  size: "50k"
+telomere:
+  teloseq: TTAGGG
+synteny:
+  - /path/to/synteny.fasta
+busco:
+  lineages_path: ${PWD}/resources/staging/busco
+  lineage: lepidoptera_odb12
+alignment:
+  genesets:
+    - /path/to/genesets.csv

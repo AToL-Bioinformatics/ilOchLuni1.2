@@ -1,0 +1,8 @@
+reads_path:
+  - ${PWD}/results/qc/reads/PACBIO_SMRT/bpa-avid-pacbio-hifi-702636-m84073_260626_035957_s1.fastq.gz
+reads_type: "hifi"
+reads_layout: "SINGLE"
+sample_id: "ilOchLuni1"
+scientific_name: "Ochrogaster lunifer"
+busco_lineages: "lepidoptera_odb10"
+taxid: 319761

@@ -1,0 +1,26 @@
+---
+# need to set TMPDIR if we're using cleanenv
+apptainer-args: -B $PWD,/tmp 
+  -H $(mktemp -d) 
+  --pwd $PWD 
+  --env TMPDIR=/tmp 
+  --env LC_ALL=C 
+  --env BPA_APIKEY=${BPA_APIKEY}
+  --env BPA_MIRROR_PASSWD=${BPA_MIRROR_PASSWD}
+  --env BPA_MIRROR_USER=${BPA_MIRROR_USER}
+  --env RCLONE_CONFIG_UPLOAD_ACCESS_KEY_ID=${RCLONE_CONFIG_UPLOAD_ACCESS_KEY_ID}
+  --env RCLONE_CONFIG_UPLOAD_ENDPOINT=${RCLONE_CONFIG_UPLOAD_ENDPOINT}
+  --env RCLONE_CONFIG_UPLOAD_PROVIDER=${RCLONE_CONFIG_UPLOAD_PROVIDER}
+  --env RCLONE_CONFIG_UPLOAD_SECRET_ACCESS_KEY=${RCLONE_CONFIG_UPLOAD_SECRET_ACCESS_KEY}
+  --env RCLONE_CONFIG_UPLOAD_TYPE=${RCLONE_CONFIG_UPLOAD_TYPE}
+  --containall --cleanenv --writable-tmpfs
+apptainer-prefix: $APPTAINER_CACHEDIR
+benchmark-extended: True
+configfile:
+  - profiles/local/workflow.config.yaml
+cores: 8
+printshellcmds: true
+rerun-triggers:
+  - mtime
+use-apptainer: True
+use-conda: False

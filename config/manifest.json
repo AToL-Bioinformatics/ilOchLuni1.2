@@ -1,0 +1,48 @@
+{
+  "assembly_version": 2,
+  "dataset_id": "ilOchLuni1",
+  "scientific_name": "Ochrogaster lunifer",
+  "taxon_id": 319761,
+  "busco_odb10_dataset_name": "lepidoptera",
+  "busco_odb12_dataset_name": "lepidoptera",
+  "ncbi_class": "Insecta",
+  "hic_motif": "GATC,GANTC,CTNAG,TTAA",
+  "mitochondrial_genetic_code_id": 5,
+  "mitohifi_reference_species": "Ochrogaster lunifer",
+  "oatk_hmm_name": "insecta",
+  "augustus_dataset_name": "camponotus_floridanus",
+  "genetic_code_id": 1,
+  "assembly_id": "94b49f4f-835d-47d3-b1ec-43e6efcef6d3",
+  "read_files": [
+    {
+      "name": "bpa-avid-pacbio-hifi-702636-m84073_260626_035957_s1",
+      "data_type": "PACBIO_SMRT",
+      "base_url": "https://downloads-qcif.bioplatforms.com/bpa/avid_staging/pacbio-hifi/BPAOPS-2129/20260702_AVID_AGRF_CAGRF26050436_m84073_260626_035957_s1/",
+      "single_end": [
+        {
+          "url": "https://data.bioplatforms.com/dataset/bpa-avid-pacbio-hifi-702636-m84073_260626_035957_s1/resource/8ce0fb7f6e0809cd79f305ea3e618abb/download/702636_AVID_AGRF_m84073_260626_035957_s1.ccs.bam",
+          "md5sum": "8ce0fb7f6e0809cd79f305ea3e618abb"
+        }
+      ]
+    },
+    {
+      "name": "bpa-avid-illumina-shortread-669080-sc2233836-sc3",
+      "data_type": "Hi-C",
+      "base_url": "https://downloads-qcif.bioplatforms.com/bpa/avid_staging/illumina-shortread/BPAOPS-2174/20260801_AVID_BRF_WO31020_SC2233836-SC3/",
+      "r1": [
+        {
+          "url": "https://data.bioplatforms.com/dataset/bpa-avid-illumina-shortread-669080-sc2233836-sc3/resource/f1201be8ba4c9072e3745dce1c5cdeb6/download/669080_AVID_BRF_SC2233836-SC3_TCCGTTAA-GCCAAGCT_S1_L001_R1_001.fastq.gz",
+          "md5sum": "f1201be8ba4c9072e3745dce1c5cdeb6",
+          "lane_number": "L001"
+        }
+      ],
+      "r2": [
+        {
+          "url": "https://data.bioplatforms.com/dataset/bpa-avid-illumina-shortread-669080-sc2233836-sc3/resource/15d71aae8ad5cdd97c925313711adb33/download/669080_AVID_BRF_SC2233836-SC3_TCCGTTAA-GCCAAGCT_S1_L001_R2_001.fastq.gz",
+          "md5sum": "15d71aae8ad5cdd97c925313711adb33",
+          "lane_number": "L001"
+        }
+      ]
+    }
+  ]
+}

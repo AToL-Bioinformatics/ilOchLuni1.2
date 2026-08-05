@@ -1,0 +1,9 @@
+
+- id: ilOchLuni1
+  platform: illumina_hic
+  reads:
+    - ${PWD}/results/qc/reads/Hi-C/bpa-avid-illumina-shortread-669080-sc2233836-sc3.cram
+- id: ilOchLuni1
+  platform: pacbio_hifi
+  reads:
+    - ${PWD}/results/qc/reads/PACBIO_SMRT/bpa-avid-pacbio-hifi-702636-m84073_260626_035957_s1.fastq.gz
