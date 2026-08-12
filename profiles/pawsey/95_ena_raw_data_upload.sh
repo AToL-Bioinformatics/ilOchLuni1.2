@@ -11,3 +11,4 @@ source profiles/pawsey/lib/snakemake_env.sh
 # Setup and run
 setup_snakemake
 run_snakemake ena_raw_data_upload
+run_snakemake ena_raw_data_broker
