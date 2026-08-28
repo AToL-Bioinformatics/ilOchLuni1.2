@@ -12,4 +12,5 @@ source profiles/pawsey/lib/snakemake_env.sh
 
 # Setup and run
 setup_snakemake
-run_snakemake all_assembly_stats
+run_snakemake all_assembly_stats 
+run_snakemake calculate_depth
