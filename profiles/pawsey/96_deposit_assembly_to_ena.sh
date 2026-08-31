@@ -12,4 +12,4 @@ source profiles/pawsey/lib/snakemake_env.sh
 
 # Setup and run
 setup_snakemake
-run_snakemake deposit_ascc_assembly_to_ena
+run_snakemake deposit_assembly_to_ena
