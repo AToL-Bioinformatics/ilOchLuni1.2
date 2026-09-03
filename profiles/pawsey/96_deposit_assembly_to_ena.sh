@@ -4,8 +4,8 @@
 #SBATCH --cpus-per-task=2
 #SBATCH --ntasks=1
 #SBATCH --mem=8g
-#SBATCH --output=logs/slurm/deposit_ascc_assembly_to_ena.%j.out
-#SBATCH --error=logs/slurm/deposit_ascc_assembly_to_ena.%j.err
+#SBATCH --output=logs/slurm/deposit_assembly_to_ena.%j.out
+#SBATCH --error=logs/slurm/deposit_assembly_to_ena.%j.err
 
 # Source snakemake environment
 source profiles/pawsey/lib/snakemake_env.sh
