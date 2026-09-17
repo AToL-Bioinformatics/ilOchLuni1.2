@@ -10,7 +10,7 @@
   "mitochondrial_genetic_code_id": 5,
   "mitohifi_reference_species": "Ochrogaster lunifer",
   "oatk_hmm_name": "insecta",
-  "augustus_dataset_name": "camponotus_floridanus",
+  "augustus_dataset_name": "tiberius_model_cfg:insecta.yaml",
   "genetic_code_id": 1,
   "assembly_id": "94b49f4f-835d-47d3-b1ec-43e6efcef6d3",
   "read_files": [
