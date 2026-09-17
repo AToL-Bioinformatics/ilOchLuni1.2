@@ -15,7 +15,7 @@ The repo was produced automatically from boilerplate code at
 ```yaml
 assembly_id: 94b49f4f-835d-47d3-b1ec-43e6efcef6d3
 assembly_version: 2
-augustus_dataset_name: camponotus_floridanus
+augustus_dataset_name: tiberius_model_cfg:insecta.yaml
 busco_odb10_dataset_name: lepidoptera
 busco_odb12_dataset_name: lepidoptera
 dataset_id: ilOchLuni1
