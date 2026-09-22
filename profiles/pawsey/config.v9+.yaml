@@ -7,7 +7,6 @@ cluster-generic-submit-cmd: mkdir -p logs/slurm/{rule} &&
   sbatch
   --time={resources.runtime}
   {resources.partitionFlag}
-  --gres=gpu:{resources.gpu}
   --cpus-per-task={threads}
   --mem={resources.mem_mb}
   --job-name={rule}-smk
@@ -19,7 +18,6 @@ default-resources:
   - partitionFlag=""
   - mem_mb=4000
   - runtime=5
-  - gpu=0
 executor: cluster-generic
 jobs: 128
 keep-going: true
@@ -46,6 +44,8 @@ set-resources:
     partitionFlag: "--partition=copy"
   stage_s3_bucket:
     partitionFlag: "--partition=copy"
+  tiberius:
+    partitionFlag: "--partition=gpu"
   transfer_raw_reads:
     partitionFlag: "--partition=copy"
 singularity-args: -B ${PWD},${TMPDIR},/scratch
