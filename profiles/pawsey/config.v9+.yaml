@@ -5,19 +5,21 @@ cluster-generic-cancel-cmd: scancel
 cluster-generic-status-cmd: status-sacct-robust.sh
 cluster-generic-submit-cmd: mkdir -p logs/slurm/{rule} &&
   sbatch
-  --time={resources.runtime}
-  {resources.partitionFlag}
   --cpus-per-task={threads}
-  --mem={resources.mem_mb}
   --job-name={rule}-smk
+  --mem={resources.mem_mb}
   --output=logs/slurm/{rule}/{rule}-%j.out
   --parsable
+  --time={resources.runtime}
+  "--export={resources.sbatch_export} "
+  {resources.partitionFlag}
 configfile:
   - profiles/pawsey/workflow.config.yaml
 default-resources:
   - partitionFlag=""
   - mem_mb=4000
   - runtime=5
+  - sbatch_export="APPTAINER_CLEANENV=true,APPTAINER_CONTAINALL=true,APPTAINER_WRITABLE_TMPFS=true"
 executor: cluster-generic
 jobs: 128
 keep-going: true
@@ -44,12 +46,13 @@ set-resources:
     partitionFlag: "--partition=copy"
   stage_s3_bucket:
     partitionFlag: "--partition=copy"
-  tiberius:
+  tiberius: # sbatch_export hack is only needed for the Pawsey tiberius container.
     partitionFlag: "--partition=gpu"
+    gpu: "attempt + 1"
+    sbatch_export: 'APPTAINER_CLEANENV="",APPTAINER_WRITABLE_TMPFS=""'
   transfer_raw_reads:
     partitionFlag: "--partition=copy"
 singularity-args: -B ${PWD},${TMPDIR},/scratch
-  --nv
   -H $(mktemp -d)
   --pwd ${PWD}
   --containall --cleanenv --writable-tmpfs

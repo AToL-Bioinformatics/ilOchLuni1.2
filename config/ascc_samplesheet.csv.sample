@@ -1,4 +1,6 @@
 sample,assembly_type,assembly_file
 ilOchLuni1.2,PRIMARY,${PWD}/results/genomeassembly/ilOchLuni1.2/ilOchLuni1.2.pacbio_hifi.phased/scaffolding/asm_hap1_scaffolds_final.fa.gz
 ilOchLuni1.2,HAPLO,${PWD}/results/genomeassembly/ilOchLuni1.2/ilOchLuni1.2.pacbio_hifi.phased/scaffolding/asm_hap2_scaffolds_final.fa.gz
+ilOchLuni1.2,PRIMARY_BUSCO_TABLE,${PWD}/results/genomeassembly/ilOchLuni1.2/ilOchLuni1.2.pacbio_hifi.phased/scaffolding/busco.lepidoptera_odb12/asm-busco/asm_hap1_scaffolds_final.fa/run_lepidoptera_odb12/full_table.tsv
+ilOchLuni1.2,HAPLO_BUSCO_TABLE,${PWD}/results/genomeassembly/ilOchLuni1.2/ilOchLuni1.2.pacbio_hifi.phased/scaffolding/busco.lepidoptera_odb12/asm-busco/asm_hap2_scaffolds_final.fa/run_lepidoptera_odb12/full_table.tsv
 ilOchLuni1.2,MITO,${PWD}/results/genomeassembly/ilOchLuni1.2/ilOchLuni1.2.pacbio_hifi.phased/mito/final_mitogenome.fasta
