@@ -5,13 +5,13 @@ cluster-generic-cancel-cmd: scancel
 cluster-generic-status-cmd: status-sacct-robust.sh
 cluster-generic-submit-cmd: mkdir -p logs/slurm/{rule} &&
   sbatch
+  {resources.partitionFlag}
   --cpus-per-task={threads}
   --job-name={rule}-smk
   --mem={resources.mem_mb}
   --output=logs/slurm/{rule}/{rule}-%j.out
   --parsable
   --time={resources.runtime}
-  "{resources.partitionFlag}"
 configfile:
   - profiles/pawsey/workflow.config.yaml
 default-resources:

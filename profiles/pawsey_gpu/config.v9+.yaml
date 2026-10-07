@@ -11,6 +11,7 @@
 #    be set to 1
 cluster-generic-submit-cmd: mkdir -p logs/slurm/{rule} &&
   sbatch
+  {resources.partitionFlag}
   --account=${GPU_ACCOUNT}
   --gpus-per-task={resources.gpu}
   --gres=gpu:{resources.gpu}
@@ -20,7 +21,6 @@ cluster-generic-submit-cmd: mkdir -p logs/slurm/{rule} &&
   --output=logs/slurm/{rule}/{rule}-%j.out
   --parsable
   --time={resources.runtime}
-  "{resources.partitionFlag}"
 default-resources:
   - partitionFlag="--partition=gpu"
   - runtime=5
